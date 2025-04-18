@@ -5,7 +5,7 @@ namespace Designs\php;
 //~ This is the Blue print singleton class - parent class. we can extend it and create other classes easily.
 
 class Singleton {
-    private static $_instances = [];
+    private static $_instances = [];  //need persistent value and parent variable in called class
 
     public static function instance (){
         //let's get the class fully qualified namespace (simply the name string)
