@@ -2,3 +2,7 @@
 25-04-18 1111:0404:2222 : I am logger 1
 25-04-18 1111:0404:2222 : I am logger 2
 25-04-18 1111:0404:2222 : Logger has only one instance
+25-04-18 11:04:07 : Hope log works fine
+25-04-18 11:04:07 : I am logger 1
+25-04-18 11:04:07 : I am logger 2
+25-04-18 11:04:07 : Logger has only one instance

@@ -1,17 +1,19 @@
 <?php
 namespace Designs\php;
+
+require_once ('Singleton.php');
+
 use Designs\php\Singleton;
 
 //lets make a specific subclass - following open closed so the parent class does not need to be modified every time we need a new logic specific singleton class. 
 
-require_once ('index.php');
 
 class Logger extends Singleton {
     // for simplicity we can write log data in a file
 
     public function writeLog($message) : void {
         $file = fopen('log.txt', 'a+');
-        fwrite($file, date('y-m-d hh:mm:ss').' : '."$message".PHP_EOL);
+        fwrite($file, date('y-m-d H:m:s').' : '."$message".PHP_EOL);
         fclose($file);
     }
 
