@@ -12,7 +12,7 @@ class Logger extends Singleton {
     // for simplicity we can write log data in a file
 
     public function writeLog($message) : void {
-        $file = fopen('log.txt', 'a+');
+        $file = fopen('design-patterns/singleton/php/log.txt', 'a+');
         fwrite($file, date('y-m-d H:m:s').' : '."$message".PHP_EOL);
         fclose($file);
     }
