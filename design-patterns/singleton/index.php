@@ -5,15 +5,15 @@ namespace Designs\php;
 //~ This is the Blue print singleton class - parent class. we can extend it and create other classes easily.
 
 class Singleton {
-    private static $_instances = 0;
+    private static $_instances = [];
 
     public static function instance (){
         //let's get the class fully qualified namespace (simply the name string)
         $cls = static::class; // support late static binding — i.e., dynamically know the class that’s calling the method 
-        if(!(self::$_instances === 0)){
-            self::$_instances = new static();
+        if(!isset(self::$_instances[$cls])){
+            self::$_instances[$cls] = new static();
         }
-        return self::$_instances; //self - the base class name, where the method is written - as I want to store it in parent class property
+        return self::$_instances[$cls]; //self - the base class name, where the method is written - as I want to store it in parent class property
     }
 
 
