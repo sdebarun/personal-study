@@ -1,6 +1,6 @@
 <?php
 
-// type hinting in php 
+// type hinting in php and dependency injection
 
 /**
  * creating a class and type hint it in a function 
